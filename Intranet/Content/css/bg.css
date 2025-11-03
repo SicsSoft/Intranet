@@ -8,8 +8,8 @@
         transform: scale(1.5);
         opacity: 0;
     }
-
 }
+
 @keyframes slide {
     0% {
         transform: translateX(-25%);
@@ -30,7 +30,7 @@ body {
 
 .bg {
     animation: slide 50s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(221, 186, 255) 50%, rgb(255, 214, 245) 50%);
+    background-image: linear-gradient(-60deg, rgb(138, 156, 255) 50%, rgb(194, 220, 255) 50%);
     bottom: 0;
     left: -50%;
     opacity: .5;
@@ -49,8 +49,8 @@ body {
     animation-duration: 70s;
 }
 
-.btn{
-    background-color: black;
+.btn {
+    background-color: rgb(29, 35, 102);
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -59,11 +59,11 @@ body {
     transition: all 0.4s ease;
 }
 
-.btn:hover {
-    background-color: white;
-    color: mediumpurple;
-    transform: scale(1.05);
-}
+    .btn:hover {
+        background-color: white;
+        color: rgb(119, 139, 255);
+        transform: scale(1.05);
+    }
 
 .neon-pulse {
     border-radius: 15px;
@@ -71,13 +71,13 @@ body {
     overflow: visible;
 }
 
-.neon-pulse::before,
-.neon-pulse::after {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border: 3px solid white;
-    border-radius: inherit;
-    animation: pulseOut 5s ease-out infinite;
-    opacity: 0;
-}
+    .neon-pulse::before,
+    .neon-pulse::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border: 3px solid white;
+        border-radius: inherit;
+        animation: pulseOut 5s ease-out infinite;
+        opacity: 0;
+    }
