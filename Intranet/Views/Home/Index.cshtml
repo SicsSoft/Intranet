@@ -1,4 +1,70 @@
-﻿@*HEADER*@
+﻿<div id="myModal" class="modal fade rounded" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content card-body">
+            <div class="progress" style="height: 15px;">
+                <div id="bp" class="progress-bar bg-info" style="width: 0%;"></div>
+            </div>
+            <div class="modal-header">
+                <h5 class="modal-title ns">Orientação de Segurança - Bloqueio de Computadores</h5>
+            </div>
+            <div class="card-text p-4">
+                <p>Prezados(as),</p>
+                <p>Com o objetivo de reforçar a segurança das informações da empresa, pedimos que todos adotem o hábito de bloquear o computador sempre que se ausentarem da estação de trabalho, mesmo por curtos períodos.</p>
+
+                <p>
+                    Para facilitar, utilize o atalho:
+                    <strong>Windows + L</strong>
+                </p> 
+            </div>
+            <div class="d-flex justify-content-center align-content-center">
+                <img src="~/Content/img/modal.png" class="img-fluid" />
+            </div>
+            <div class="modal-footer fw-bold">
+                <div id="contRegress">3</div>
+                <button id="btnM" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // modal aparece assim q a tela e carregada
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = new bootstrap.Modal(document.getElementById('myModal'))
+        modal.show();
+    });
+
+    // close sumir e aparece
+    document.getElementById('btnM').style.display = 'none'
+    setTimeout(function () {
+        document.getElementById('btnM').style.display = 'inline'
+    }, 3000)
+
+    // segundos regressivo
+    contRegress = setInterval(function () {
+        const cronometro = document.getElementById('contRegress').innerHTML
+        const soma = parseInt(cronometro) - 1
+        if (soma === 0) {
+            document.getElementById('contRegress').innerHTML = "Você ja pode fechar"
+            pararContagem()
+        } else {
+            document.getElementById('contRegress').innerHTML = soma
+        }
+    }, 1000)
+
+    function pararContagem() {
+        clearInterval(contRegress)
+    }
+
+    // barra progresso
+    let barra = document.getElementById("bp")
+    let carga = 0
+    let intBarra = setInterval(function () {
+        barra.style.width = carga + "%"
+        carga++
+    }, 15)
+</script>
+@*HEADER*@
 <header id="home">
     <div class="container-fluid mb-5 d-flex align-items-center justify-content-center">
         <div id="cta">
