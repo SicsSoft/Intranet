@@ -107,8 +107,8 @@ section {
 
 /* TITULOS */
 .tt {
-    background-color: white;
-    color: purple;
+    background-color: #42111f;
+    color: white;
     border-radius: 15px 0;
     padding: 5px 15px;
     display: inline-block;
@@ -123,8 +123,8 @@ section {
 }
 
 .tt3 {
-    background-color: white;
-    color: mediumpurple;
+    background-color: #9b8559;
+    color: white;
     border-radius: 0 15px;
     padding: 5px 15px;
     display: inline-block;

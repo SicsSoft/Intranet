@@ -31,10 +31,10 @@ body {
 
 .bg {
     animation: slide 30s ease-in-out infinite alternate;
-    background-image: linear-gradient(65deg, rgb(251, 242, 255) 60%, rgb(231, 201, 255) 60%);
+    background-image: linear-gradient(65deg, rgb(247, 233, 255) 60%, rgb(225, 210, 175) 30%);
     bottom: 0;
     left: -50%;
-    opacity: .5;
+    opacity: .2;
     position: fixed;
     right: -50%;
     top: 0;
